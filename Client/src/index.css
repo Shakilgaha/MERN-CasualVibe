@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/*---------------------------------
+/* Container  
+ ----------------------------------*/
+.container {
+    @apply max-w-[85rem] m-auto px-6
+}
+
+/*---------------------------------
+/* Center The Div  
+ ----------------------------------*/
+.div-center {
+    @apply flex justify-center items-center;
+}
+
+
+/*---------------------------------
+for Nav links   
+ ----------------------------------*/
+#header li {
+    @apply hover:text-violet-600
+}
+
+#header-mobile li {
+    @apply hover:bg-gray-100  hover:text-violet-600 py-3 px-3 dark:hover:bg-zinc-700
+}
+
+
+/*---------------------------------
+    for current Active page  
+ ----------------------------------*/
+.active {
+    @apply text-violet-600 font-bold;
+}
+
+#Cart .active {
+    @apply text-black font-bold;
+
+}
+
+
+/*---------------------------------
+ For All Buttons
+ ----------------------------------*/
+.btn-effect {
+    @apply hover:scale-105 transition duration-500
+}
+
+.btn-violet {
+    /* @apply bg-purple-600 text-white px-8 py-3 rounded-md hover:scale-110 ; */
+    @apply inline-block bg-violet-600 text-white px-6 py-3 rounded-lg text-lg font-medium
+}
+
+.btn-slider {
+    @apply bg-zinc-500 px-2 py-2 rounded-full text-center opacity-70 font-bold text-white
+}
+
+
+.btn-blue {
+    @apply bg-blue-600 text-white px-6 py-2 rounded-full text-lg font-medium
+}
+
+.btn-black {
+    @apply bg-black dark:bg-white dark:text-black text-white px-4 py-3 rounded-md text-center flex justify-center items-center
+}
+
+.btn-red {
+    @apply bg-red-500 text-white px-4 py-2 rounded-full text-center flex justify-center items-center;
+
+}
+
+/*---------------------------------
+/* Contact Page 
+ ----------------------------------*/
+
+#form input,
+textarea,
+select,
+.input {
+    @apply w-full p-3 bg-white border border-zinc-400 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-400 dark:bg-zinc-900  dark:border-zinc-600
+}
+
+#formProduct .input, textarea, select {
+    @apply w-full p-3 bg-white border border-zinc-400 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-400 dark:bg-zinc-900  dark:border-zinc-600
+}
+
+
+
+/*---------------------------------
+/* Register Page  
+----------------------------------*/
+span a {
+    @apply text-violet-600 font-bold
+}
+
+
+/*---------------------------------
+ For Admin Layout
+ ----------------------------------*/
+#adminPanel li {
+    @apply px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-200 rounded dark:text-zinc-300 dark:hover:bg-zinc-600
+}
+
+#adminPanel .active li {
+    @apply px-4 py-2 bg-violet-500 text-white rounded
+}
+
+#adminLinks1 p {
+    @apply w-full font-bold text-center text-black py-3;
+}
+
+#adminLinks1 .active p {
+    @apply text-blue-600 font-extrabold w-full text-center;
+}
+
+
+/*---------------------------------
+ For Admin Products
+ ----------------------------------*/
+#AdminProducts p {
+    @apply font-bold
+}
+
+
+#AdminProducts p span {
+    @apply text-gray-500
+}
+
+
+/*---------------------------------
+ For Single product Page
+ ----------------------------------*/
+
+#singleProductImg img {
+    @apply w-[8rem] h-[7rem] lg:w-[10rem] lg:h-[9rem] shadow-2xl hover:scale-105 hover:transition hover:duration-1000
+}
+
+
+/*---------------------------------
+ For Slider Js
+ ----------------------------------*/
+
+.swiper-button-next, .swiper-button-prev {
+    @apply text-violet-500 rounded-full;
+    color: #7C3AED !important;
+    /* font-size: 10px !important; */
+}
+
+.swiper-pagination-bullets span {
+    @apply bg-violet-500
+}
+
+.swiper-scrollbar-drag {
+    @apply bg-violet-500;
+    color: #7C3AED !important;
+    background-color: #7C3AED !important;
+}
+
+
+
+/*---------------------------------
+/* google Fonts 
+----------------------------------*/
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.salsa-regular {
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*---------------------------------
+/* for Scroll BarDesign    
+----------------------------------*/
+:root {
+    --scrollbar-track : #ffffff ;
+}
+.dark {
+    --scrollbar-track : #18181b ;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+    /* @apply dark:bg-zinc-900 bg-white ; */
+    background: var(scrollbar-track);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* Scrollbar Handle (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: #7C3AED;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
